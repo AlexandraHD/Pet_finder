@@ -1,17 +1,15 @@
 package beans;
 
 public class Usuario {
-    private int id;
     private String username;
     private String contrasena;
     private String nombre;
     private String apellido;
     private String email;
-    private int telefono;
+    private String telefono;
     private String ciudad;
 
-    public Usuario(int id, String username, String contrasena, String nombre, String apellido, String email, int telefono, String ciudad) {
-        this.id = id;
+    public Usuario(String username, String contrasena, String nombre, String apellido, String email, String telefono, String ciudad) {
         this.username = username;
         this.contrasena = contrasena;
         this.nombre = nombre;
@@ -19,14 +17,6 @@ public class Usuario {
         this.email = email;
         this.telefono = telefono;
         this.ciudad = ciudad;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public String getUsername() {
@@ -69,11 +59,11 @@ public class Usuario {
         this.email = email;
     }
 
-    public int getTelefono() {
+    public String getTelefono() {
         return telefono;
     }
 
-    public void setTelefono(int telefono) {
+    public void setTelefono(String telefono) {
         this.telefono = telefono;
     }
 
@@ -87,7 +77,7 @@ public class Usuario {
 
     @Override
     public String toString() {
-        return "Usuario{" + "id=" + id + ", username=" + username + ", contrasena=" + contrasena + ", nombre=" + nombre + ", apellido=" + apellido + ", email=" + email + ", telefono=" + telefono + ", ciudad=" + ciudad + '}';
+        return "Usuario{" + "username=" + username + ", contrasena=" + contrasena + ", nombre=" + nombre + ", apellido=" + apellido + ", email=" + email + ", telefono=" + telefono + ", ciudad=" + ciudad + '}';
     }
     
     

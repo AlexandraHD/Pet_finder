@@ -1,0 +1,59 @@
+*{
+    margin:  0;
+    padding: 0;
+    text-align: center;
+  }
+  .qppd{
+    margin:  0;
+    padding: 0;
+  }
+  .btnbd{
+    border: none;
+    outline: none;
+    background: black;
+    text-align: left;
+    color: white
+  }
+  .hb:hover{
+    color: rgb(255, 255, 255);
+    font-weight: bold
+  }
+  .ml{
+    height: 80vh;
+  }
+  .efectovidrio {
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2); 
+    background-color: rgba(255, 255, 255, 0.0);
+    backdrop-filter: blur(7px);
+  }
+.bgimg{
+    background: url("../img/fondoLogin.jpg");
+    background-color: rgb(66, 53, 53);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100%;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    /* position: absolute; */
+}
+.slider-container {
+  border-radius: 5px;
+  margin: 0 auto;
+  display: flex;
+  width: 35%;
+  height: 50vh;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+}
+
+.slider-container img {
+  width: 100%;
+  scroll-snap-align: center;
+}
+.ci{
+  margin: 0 auto;
+}
+nav{
+  background-color: black;
+}
