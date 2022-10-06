@@ -36,13 +36,13 @@ package servlets;
 			String username = request.getParameter("username");
 			String contrasena = request.getParameter("contrasena");
 			String nombre = request.getParameter("nombre");
-			String apellido = request.getParameter("apellido");
+			String apellidos = request.getParameter("apellidos");
 			String email = request.getParameter("email");
                         String telefono = request.getParameter("telefono");
 			String ciudad = request.getParameter("ciudad");
 			
 			
-			String result = usuario.register(username, contrasena, nombre, apellido, email, telefono, ciudad);
+			String result = usuario.register(username, contrasena, nombre, apellidos, email, telefono, ciudad);
 			
 			response.setContentType("text/html;charset=UTF-8");
 			PrintWriter out = response.getWriter();

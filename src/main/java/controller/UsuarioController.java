@@ -2,8 +2,10 @@ package controller;
 
 import java.sql.ResultSet;
 import java.sql.Statement;
-import com.google.gson.Gson;
+import java.util.HashMap;
+import java.util.Map;
 
+import com.google.gson.Gson;
 import beans.Usuario;
 import connection.DBConnection;
 
@@ -29,8 +31,7 @@ public class UsuarioController implements IUsuarioController {
                 String telefono = rs.getString("telefono");
                 String ciudad = rs.getString("ciudad");
 
-                Usuario usuario
-                        = new Usuario(username, contrasena, nombre, apellidos, email, telefono, ciudad);
+                Usuario usuario = new Usuario(username, contrasena, nombre, apellidos, email, telefono, ciudad);
                 return gson.toJson(usuario);
             }
         } catch (Exception ex) {
@@ -41,7 +42,7 @@ public class UsuarioController implements IUsuarioController {
 
         return "false";
     }
-        @Override
+    @Override
     public String register(String username, String contrasena, String nombre, String apellidos, String email,
             String telefono, String ciudad) {
 
@@ -87,7 +88,7 @@ public class UsuarioController implements IUsuarioController {
             while (rs.next()) {
                 String contrasena = rs.getString("contrasena");
                 String nombre = rs.getString("nombre");
-                String apellidos = rs.getString("apellido");
+                String apellidos = rs.getString("apellidos");
                 String email = rs.getString("email");
                 String telefono = rs.getString("telefono");
                 String ciudad = rs.getString("ciudad");

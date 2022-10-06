@@ -12,11 +12,11 @@ public class DBConnection {
     public DBConnection() {
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            String url = "jdbc:mysql://localhost:" + this.port + "/" + this.bd;
-            connection = DriverManager.getConnection(url,this.login,this.password);
+            String url = "jdbc:mysql://localhost:"+this.port+"/"+this.bd;
+            connection = DriverManager.getConnection(url, this.login, this.password);
             System.out.println("Conexión establecida");
         } catch (Exception ex) {
-            System.out.println("Error en la conexión");
+            System.out.println("Error en la conexión"+ex);
         }
     }
     
