@@ -2,7 +2,11 @@ package controller;
 
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.sql.Timestamp;
+import java.util.ArrayList;
+import java.sql.Date;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import com.google.gson.Gson;
@@ -18,7 +22,7 @@ public class UsuarioController implements IUsuarioController {
 
         DBConnection con = new DBConnection();
 
-        String sql = "Select * from pet_finder where username = '" + username
+        String sql = "Select * from usuario where username = '" + username
                 + "' and contrasena = '" + contrasena + "'";
         try {
             Statement st = con.getConnection().createStatement();
@@ -49,7 +53,7 @@ public class UsuarioController implements IUsuarioController {
         Gson gson = new Gson();
 
         DBConnection con = new DBConnection();
-        String sql = "Insert into pet_finder values('" + username + "', '" + contrasena + "', '" + nombre
+        String sql = "Insert into usuario values('" + username + "', '" + contrasena + "', '" + nombre
                 + "', '" + apellidos + "', '" + email + "', " + telefono + ", " + ciudad + ")";
 
         try {
